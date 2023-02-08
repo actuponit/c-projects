@@ -62,8 +62,9 @@ int main()
 void intro()
 {
 	cout <<"\n\n\tEMPLOYEE MONTHLY PAYROLL MANAGEMENT SYSTEM";
-  	cout << "\n\nBY: COMPUTER SCIENCE SECTION 1\n";
-  	cout << "\tADMAS TEREFE  IMRAN MOHAMMED\tFEYSEL MOHAMMED\n";
+  	cout << "\n\n:: COMPUTER SCIENCE SECTION 1\n";
+  	cout << "\n\nPRODUCED BY:\n";
+	cout << "\tADMAS TEREFE  IMRAN MOHAMMED\tFEYSEL MOHAMMED\n";
   	cout << "\tBADRI SIRAJ   EMMANUEL SAMSON\n";
   	cout << "\n\npress any key to continue...";
     getch();
@@ -305,7 +306,8 @@ void createAccount()
    
    system ("cls");
    employee();
-   //system ("pause");
+   return ;
+   system ("pause");
 }
 
 //Prompts the employee for id and username to show him his credentials
@@ -352,7 +354,7 @@ void verifier(string username, string password)
     	break;
 	}
     if (found == false)
-        cout << "\nNo such contact is found!\n";
+        cout << "\nNo such Employee is found!\n";
         
     system("pause");
     system("cls");
@@ -361,10 +363,10 @@ void verifier(string username, string password)
 //Chooses top 3 star employees based on their overtime work
 void empOfTheYear(){
 	read();
-
+	
 	worker temp;
-	for (int x = 0; x <= index; x++){
-		for (int j = x + 1; j <= index; j++){
+	for (int x = 0; x < index-1; x++){
+		for (int j = x + 1; j < index-1; j++){
 			if (e[x].ot < e[j].ot){
 				temp = e[j];
 				e[j] = e[x];
@@ -375,7 +377,8 @@ void empOfTheYear(){
 
 	
 	cout << "Employees of the month \n";
-	for (int j = 0; j < 3; j++){
+	int length = index<=3 ? index-1:3;
+	for (int j = 0; j < length; j++){
 		cout << "***********************\n";
 		cout << j + 1;
 		cout << ".Name: " << e[j].Fname << " " <<e[j].Lname << endl;
@@ -430,7 +433,7 @@ void firedEmp()
 void total(){
 	read();
 	long sum = 0, sum1 = 0;
-	for (int j = 0; j <= index; j++){
+	for (int j = 0; j < index-1; j++){
 		sum += e[j].salary;
 		sum1 += e[j].fullSalary;	
 	}
