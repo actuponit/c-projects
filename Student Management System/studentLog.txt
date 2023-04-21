@@ -1,0 +1,2 @@
+3	Admas	Terfe	20	Male
+4	Wende	dufera	20	Famle

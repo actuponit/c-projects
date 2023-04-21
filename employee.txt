@@ -1,6 +1,0 @@
-
-1	Imran	MOhammed	clerk	50	3000	3000
-
-3	Wonde	Dufera	executive	100	15000	15000
-
-2	hamza	moh	executive	200	15000	27000
